@@ -110,9 +110,8 @@ var CommentsView = Backbone.View.extend({
     /* Render each model in the collection as a list item (<li>).
      * Remember, we have the underscore functions: */
     this.$el.find('ul').append(this.collection.map(function(comment) {
-      // YOUR CODE HERE
+        return new CommentView({model: comment}).render();
     }));
-
     return this.$el;
   }
 });
@@ -120,6 +119,7 @@ var CommentsView = Backbone.View.extend({
 // That's it! Let's watch some stats:
 
 /* Create a few new comment models using our Comment class: */
+// Create an array of models with the info
 var commentList = [
   new Comment('Doug!'), // default to 0 votes
   new Comment('Doug?', 1),
@@ -128,13 +128,16 @@ var commentList = [
   new Comment('Doug?!', 4)];
 
 // Add all of these to a new collection:
+
+// All can be wrapped up in a collection
 var comments = new Comments(commentList);
 
 // Associate a view to the collection:
 var commentsView = new CommentsView({ collection: comments });
 
+$("body").append(commentsView.render());
+
 // Append it to the page (uncomment this when you are ready):
-// $('body').append(commentsView.render());
     </script>
   </body>
 </html>

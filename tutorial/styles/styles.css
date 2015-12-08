@@ -6,6 +6,13 @@ body {
 }
 
 .message {
+  width: 300px;
   background-color: silver;
+  font-style: italic;
+  text-align: left;
+}
 
+.votes {
+ font-size: 15px;
+ padding-top: 10px;
 }

@@ -90,13 +90,13 @@ var CommentView = Backbone.View.extend({
   render: function() {
     // As in step2, we define a template:
     var html = [
-      '<div>',
-        '<span class="votes">',
-          this.model.get('votes'),
-        '<span>',
-        '<span class="comment">',
+      '<div class=message>',
+         '<span class="comment">',
           this.model.get('message'),
-        '</span>',
+        '</span>','<br>',
+        '<span class="votes">',
+          this.model.get('votes'), ' many people liked this post',
+        '<span>', 
         '</br>',
       '</div>'
     ].join('');
@@ -130,9 +130,15 @@ var CommentView = Backbone.View.extend({
 /* Create a new comment model using our Comment class,
  * passing the first message as an argument: */
 var comment = new Comment('This is a message');
+//Creates comment
+var comment2 = new Comment ('Another message dog')
 
 // Create a view, and associate it with this model:
-var commentView = new CommentView({ model: comment });
+var commentView = new CommentView({ model: comment2});
+
+comment2.upvote()
+comment2.upvote()
+
 
 /* Notice that we instantiate the view with an object {model: comment}.
  * This is called an options hash. With views, if we pass an object with

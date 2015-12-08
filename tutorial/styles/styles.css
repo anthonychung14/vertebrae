@@ -1,0 +1,11 @@
+body {
+    background: #FFF;
+    text-align: left;
+    padding: 0 25px;
+    font-family: helvetica, arial, sans-serif;
+}
+
+.message {
+  background-color: silver;
+
+}

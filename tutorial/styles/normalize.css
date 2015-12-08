@@ -1,6 +1,6 @@
 <html>
   <head>
-    <link rel="stylesheet" href="styles/styles.css"></link>
+    <script src="styles/styles.css"></script>
 
     <script src="../lib/jquery/dist/jquery.js"></script>
     <script src="../lib/underscore/underscore.js"></script>
@@ -52,7 +52,7 @@ var renderSomethingOnThePage = function(message) {
 
 // Let's try it out:
 renderSomethingOnThePage(
-  'This is the first time something got rendered');
+  'This is an example of how to use our rendering method.');
 
 /* Here are a few more examples. Every call to our rendering function (above)
  * will draw something to the page using the template defined in that function:
@@ -143,14 +143,14 @@ var Message = Backbone.Model.extend({
 var myNewMessage = new Message();
 
 // ...and then make a change on that model to see it render
-myNewMessage.set({message: 'first message set'});
-myNewMessage.set({message: 'on change. the new message'});
+myNewMessage.set({message: 'someMessage'});
+myNewMessage.set({message: 'this jigga'});
 
 var message = new Message()
 
-message.set({message: 'new message object. still re-rendered'});
-message.set({message: 'reset new message'});
-message.set('message', 'just for shits');
+message.set({message: 'hi'});
+message.set({message: 'sup'});
+message.set('message', 'ya trick');
 
 
 
